@@ -152,3 +152,92 @@ function ourWidgetsInit() {
 }
 
 add_action('widgets_init', 'ourWidgetsInit');
+
+function learningWordPress_customize_register( $wp_customize ) {
+  $wp_customize->add_setting('lwp_link_color', array(
+    'default' => '#006ec3',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_setting('lwp_btn_color', array(
+    'default' => '#006ec3',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_section('lwp_standard_colors', array(
+    'title' => __('Standard Colors', 'LearningWordPress'),
+    'priority' => 30,
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lwp_link_color_control', array(
+    'label' => __('Link Color', 'LeaningWordPress'),
+    'section' => 'lwp_standard_colors',
+    'settings' => 'lwp_link_color',
+  )));
+
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lwp_btn_color_control', array(
+    'label' => __('Button Color', 'LeaningWordPress1'),
+    'section' => 'lwp_standard_colors',
+    'settings' => 'lwp_btn_color',
+  )));
+}
+
+add_action('customize_register', 'learningWordPress_customize_register');
+
+// OUtput Customize Css
+
+function learningWordPress_customize_css() { ?>
+  <style type="text/css">
+    a:link,
+    a:visited {
+      color: <?php echo get_theme_mod('lwp_link_color'); ?>;
+    }
+
+    div.hd-search #searchsubmit {
+      background-color: <?php echo get_theme_mod('lwp_btn_color'); ?>;
+    }
+
+
+  </style>
+<?php }
+
+add_action('wp_head', 'learningWordPress_customize_css');
+
+
+function create_shortcode() {
+  echo "Hello World";
+}
+
+add_shortcode( 'test_shortcode', 'create_shortcode');
+
+
+function tao_taxonomy() {
+ 
+  /* Biến $label chứa các tham số thiết lập tên hiển thị của Taxonomy
+   */
+  $labels = array(
+    'name' => 'Các loại sản phẩm',
+    'singular' => 'Loại sản phẩm',
+    'menu_name' => 'Loại sản phẩm'
+  );
+
+  /* Biến $args khai báo các tham số trong custom taxonomy cần tạo
+   */
+  $args = array(
+    'labels'                     => $labels,
+    'hierarchical'               => false,
+    'public'                     => true,
+    'show_ui'                    => true,
+    'show_admin_column'          => true,
+    'show_in_nav_menus'          => true,
+    'show_tagcloud'              => true,
+  );
+
+  /* Hàm register_taxonomy để khởi tạo taxonomy
+   */
+  register_taxonomy('loai-san-pham', 'post', $args);
+ 
+}
+ 
+// Hook into the 'init' action
+add_action( 'init', 'tao_taxonomy', 0 );
