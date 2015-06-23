@@ -261,3 +261,18 @@ div.hd-search #s {
 	vertical-align: top;
 	padding: 3px 0;
 }
+
+/*Post column*/
+.home-columns {
+	padding-top: 30px;
+}
+
+.one-half {
+	width: 45%;
+	float: left;
+	margin-right: 10%;
+}
+
+.last {
+	margin-right: 0;
+}
