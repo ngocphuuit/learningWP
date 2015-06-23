@@ -147,6 +147,16 @@ article.post-link a {
 	float: right;
 }
 
+
+/*Footer Widget Area*/
+.footer-widget-area {
+	width: 25%;
+	float: left;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
+
 /* Footer menus*/
 
 .site-footer nav ul li {

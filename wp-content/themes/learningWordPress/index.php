@@ -20,11 +20,7 @@
 			</div>
 			<!--End Main column-->
 
-			<!-- Sidebar -->
-			<div class="secondary-column">
-				<?php dynamic_sidebar('sidebar1'); ?>
-			</div>
-			<!-- End Sidebar -->			
+			<?php get_sidebar(); ?>
 		</div>
 	<!--End Site content -->
 
