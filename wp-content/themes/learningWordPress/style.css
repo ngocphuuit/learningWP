@@ -1,0 +1,253 @@
+/*
+Theme Name: LearningWordPress
+Author: NoPu Nguyen
+Author URI: localhost/wordpress
+Version: 1.0
+*/
+body {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+
+a:link,
+a:visited {
+	color: #006ec3;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+/* General Layout */
+
+div.container {
+	max-width: 920px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+article.post {
+	border-bottom: 2px dotted #bbbbbb;
+}
+
+article.post:last-of-type {
+	border-bottom: none;
+}
+
+/* Asside */
+article.post-aside,
+article.post-link {
+	font-size: 125%;
+	background-color: #fff5c8;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+
+}
+
+.mini-meta {
+	font-size: 68%;
+	margin: 0;
+	color: #777;
+}
+
+/* Link Post Format Styles */
+article.post-link {
+	padding: 0;
+	background-color: #e0ebff;
+}
+
+/* Post format gallery Styles */
+
+article.post-gallery {
+	background-color: #222;
+	color: #ffffff;
+	padding: 20px;
+}
+
+article.post-gallery img {
+	border: none!important;
+}
+
+
+article.post-gallery h2 {
+	text-align: center;
+}
+
+article.post-link a {
+	display: block;
+	padding: 20px;
+}
+
+/* Header */
+.site-header {
+	border-bottom: 2px solid #999;
+}
+
+/* Footer */
+
+.site-footer {
+	margin-top: 30px;
+	border-top: 2px solid #999;
+}
+
+/*Naviation Menus*/
+
+.site-nave {
+	margin: 0;
+	padding: 0;
+}
+
+.site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
+.site-nav ul:after { clear: both; }
+.site-nav ul { *zoom: 1; }
+
+.site-nav ul li {
+	list-style: none;
+	float: left;
+}
+
+/* site header menu*/
+
+.site-header nav ul li {
+	margin-right: 5px;
+}
+
+
+.site-header nav ul li a:link,
+.site-header nav ul li a:visited {
+	display: block;
+	padding: 10px 18px;
+	border: 1px solid #bbbbbb;
+	border-bottom: none;
+	text-decoration: none;
+}
+
+.site-header nav ul li a:hover {
+	background-color: #ececec;
+}
+
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited {
+	background-color: #006ec3;
+	color: #fff;
+}
+
+/* Main column */
+
+.main-column {
+	width: 66%;
+	float: left;
+}
+
+.secondary-column {
+	width: 30%;
+	float: right;
+}
+
+/* Footer menus*/
+
+.site-footer nav ul li {
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted #006ec3;
+}
+
+/*Page layout*/
+
+article.page h2 {
+	font-size: 300%;
+}
+
+/* Two column title layout*/
+div.title-column {
+	width: 30%;
+	float: left;
+}
+
+div.text-column {
+	width: 70%;
+	float: right;
+}
+
+/*Info Box styles*/
+
+div.info-box {
+	width: 30%;
+	float: right;
+	margin: 0 0 30px 30px;
+	padding: 20px;
+	background-color: #eeeeee; 
+}
+
+div.info-box h4 {
+	margin-bottom: 6px;
+}
+
+div.info-box p {
+	font-size: 85%;
+}
+
+/* Post Styles */
+
+.post-info h2 {
+	font-size: 87%;
+	color: #999;
+}
+
+p.post-info {
+	font-size: 87%;
+	color: #999;
+}
+
+p.post-info a:link,
+p.post-info a:visited {
+	color: #999;
+}
+
+/*Image Styles*/
+
+img {
+	max-width: 100%;
+}
+
+.post.has-thumbnail {
+	padding-bottom: 25px;
+}
+
+.has-thumbnail {
+	position: relative;
+	padding-left: 200px;
+}
+
+.post-thumbnail {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Search */
+
+div.hd-search {
+	float: right;
+}
+
+div.hd-search label {
+	position: absolute;
+	left: -9999px;
+}
+
+div.hd-search #searchsubmit {
+	background-color: #006ec3;
+	color: #ffffff;
+	padding: 5px 14px;
+	border: none;
+	vertical-align: top;
+}
+
+div.hd-search #s {
+	vertical-align: top;
+	padding: 3px 0;
+}
